@@ -52,6 +52,7 @@ body {
     margin-top: 20px;
     margin-bottom: 10px;
     position: relative;
+    transition: all .5s;
 }
 
 .player-score {
@@ -67,7 +68,8 @@ body {
 }
 
 .active .player-name {
-    font-weight: 300;
+    color: red;
+    transform: scale(1.5);
 }
 
 .active .player-name::after {
