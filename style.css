@@ -69,7 +69,7 @@ body {
 
 .active .player-name {
     color: red;
-    transform: scale(1.5);
+    transform: scale(1.8);
 }
 
 .active .player-name::after {
