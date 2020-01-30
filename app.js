@@ -3,6 +3,7 @@ var diceDOM = document.querySelector('.dice');
 
 initGame();
 
+document.querySelector('.btn-new').addEventListener('click', initGame);
 document.querySelector('.btn-roll').addEventListener('click', function () {
     var dice = Math.floor(Math.random() * 6) + 1;
     diceDOM.style.display = 'block';
@@ -38,6 +39,7 @@ function nextPlayer() {
     diceDOM.style.display = 'none';
 };
 
+
 function initGame() {
     scores = [0, 0];
     roundScore = 0;
@@ -48,4 +50,6 @@ function initGame() {
     document.getElementById('score-1').textContent = '0';
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
+    document.getElementById('name-0').textContent = 'Player 1';
+    document.getElementById('name-1').textContent = 'Player 2';
 }
