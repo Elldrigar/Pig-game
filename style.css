@@ -73,12 +73,12 @@ body {
 }
 
 .active .player-name::after {
-    content: "\2022";
-    font-size: 47px;
+    content: "\00d7";
+    font-size: 67px;
     position: absolute;
     color: #EB4D4D;
-    top: -7px;
-    right: 10px;
+    top: -14px;
+    right: 45px;
 
 }
 
