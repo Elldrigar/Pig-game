@@ -5,8 +5,9 @@
 }
 
 *:focus,
-*:active {
-    outline: 0;
+*:active,
+*::-moz-focus-inner {
+    outline: 0 !important;
 }
 
 .clearfix::after {
