@@ -31,7 +31,15 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
         diceDOM.style.display = 'none';
 
-        if (scores[activePlayer] >= 100) {
+        var input = document.querySelector('.final-score').value;
+        var winScore;
+        if (input) {
+            winScore = input;
+        } else {
+            winScore = 100;
+        }
+
+        if (scores[activePlayer] >= winScore) {
             document.querySelector('#name-' + activePlayer).textContent = 'WINNER!';
             diceDOM.style.display = 'none';
             gamePlaying = false;
