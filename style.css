@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+*:focus,
+*:active {
+    outline: 0;
+}
+
 .clearfix::after {
     content: "";
     display: table;
@@ -169,4 +174,18 @@ i {
 .winner .player-name {
     font-weight: 300;
     color: #EB4D4D;
+}
+
+.final-score {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 520px;
+    color: #555;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    width: 160px;
+    text-transform: uppercase;
+    /* border: none; */
 }
