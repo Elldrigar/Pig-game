@@ -17,9 +17,11 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
             roundScore += dice;
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
         } else {
-            nextPlayer();
+            diceDOM.src = 'img/dice-' + dice + '.png';
+            document.querySelector('.btn-roll').style.display = 'none';
+            document.querySelector('.btn-hold').style.display = 'none';
+            setTimeout(nextPlayer, 1500);
         }
-
         lastDice = dice;
     }
 });
@@ -52,7 +54,8 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
 function nextPlayer() {
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     roundScore = 0;
-
+    document.querySelector('.btn-roll').style.display = 'block';
+    document.querySelector('.btn-hold').style.display = 'block';
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
     document.querySelector('.player-0-panel').classList.toggle('active');
