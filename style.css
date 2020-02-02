@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-*:focus,
-*:active,
-*::-moz-focus-inner {
-    outline: 0 !important;
-}
-
 .clearfix::after {
     content: "";
     display: table;
@@ -100,7 +94,7 @@ body {
 .player-current-label {
     text-transform: uppercase;
     margin-bottom: 10px;
-    font-size: 12px;
+    font-size: 18px;
     color: #222;
 }
 
@@ -188,5 +182,4 @@ i {
     padding: 10px;
     width: 160px;
     text-transform: uppercase;
-    /* border: none; */
 }
